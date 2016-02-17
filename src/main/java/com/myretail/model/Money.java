@@ -2,11 +2,18 @@ package com.myretail.model;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Money {
-	
+	@JsonProperty("value")
 	private BigDecimal amount;
+	@JsonProperty("currency_code")
 	private Currency currency;
-	private enum Currency{ USD,GBP};
+		
+	public Money(BigDecimal amount, Currency currency){
+		this.amount = amount;
+		this.currency = currency;
+	}
 	
 	public BigDecimal getAmount() {
 		return amount;

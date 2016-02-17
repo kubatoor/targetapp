@@ -1,4 +1,4 @@
-package com.target.casestudy;
+package com.myretail.controller.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
